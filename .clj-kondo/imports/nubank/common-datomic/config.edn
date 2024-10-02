@@ -1,0 +1,12 @@
+{:hooks   {:analyze-call {common-datomic.test-helpers/let-entities nubank.common-datomic/let-entities}}
+ :lint-as {common-datomic.functions/constraint-fn
+           clojure.core/defn
+
+           common-datomic.functions/defn
+           clojure.core/defn
+
+           common-datomic.contract.new-test-helpers/deftest-enforce-contracts
+           clojure.test/deftest
+
+           common-datomic.functions/data-fn
+           schema.core/defn}}

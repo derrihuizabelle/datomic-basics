@@ -1,0 +1,17 @@
+{:hooks {:analyze-call {common-core.time/local-date-time->string nubank.common-core/local-date-time->string
+                        common-core.time/local-date->string      nubank.common-core/local-date->string
+                        common-core.time/local-time->string      nubank.common-core/local-time->string
+                        common-core.time/string->local-date      nubank.common-core/string->local-date
+                        common-core.time/string->local-time      nubank.common-core/string->local-time
+                        common-core.time/string->year-month      nubank.common-core/string->year-month
+                        common-core.time/year-month->string      nubank.common-core/year-month->string}}
+ :lint-as {common-core.exceptions.core/try-type clojure.core/try
+           common-core.exceptions/try-type clojure.core/try
+           common-core.misc/when-all clojure.core/let}
+ ;; we can improve this to make a hook that expands to a let + try
+ :linters {:unresolved-symbol {:exclude [(plumbing.core/fnk)
+                                         (common-core.exceptions.core/try-type [catch-not e ex e# ex# _])
+                                         (common-core.exceptions/try-type [catch-not e ex e# ex# _])]}
+           :missing-clause-in-try {:exclude [(common-core.exceptions.core/try-type)
+                                             (common-core.exceptions/try-type)]}
+           :avoid-upper-case-year-notation {:level :warning}}}

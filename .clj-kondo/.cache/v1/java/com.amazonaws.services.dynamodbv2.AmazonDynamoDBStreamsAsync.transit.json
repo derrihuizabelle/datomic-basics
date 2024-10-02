@@ -1,0 +1,1 @@
+["^ ","~:members",["^ ","describeStreamAsync",["~#set",[["^ ","~:flags",["^2",["~:method","~:public"]]]]],"getRecordsAsync",["^2",[["^ ","^3",["^2",["^4","^5"]]]]],"getShardIteratorAsync",["^2",[["^ ","^3",["^2",["^4","^5"]]]]],"listStreamsAsync",["^2",[["^ ","^3",["^2",["^4","^5"]]]]]]]
